@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website design</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="service.css">
+    <style>
+        .footer {
+            background-color: #843aca; /* Dark purple background */
+            color: #bfbfbf; /* Light gray text color */
+            padding: 20px 0;
+        }
+        .footer .contact-info p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+        .footer .contact-info i {
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+        .footer .nav-links a {
+            display: inline-flex;
+            align-items: center;
+            color: #bfbfbf;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+        .footer .nav-links a i {
+            margin-right: 5px;
+            font-size: 2rem;
+        }
+        .footer .nav-links a:hover {
+            color: #ffffff;
+            font-size: 1.8rem;
+        }
+        .footer .nav-links a{
+            font-size: 1.5rem;
+        }
+        .dropdown-image {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+        .navbar-brand .gear-icon {
+            color: #f39c12;
+        }
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        .service-card {
+      background-color: #2a0134; /* Card background color */
+      color: white;
+      border: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .service-card .card-icon {
+      font-size: 40px;
+      color: #ff9800;
+      margin-bottom: 15px;
+    }
+    .service-card .btn {
+      background-color: transparent;
+      color: #00ff00;
+      border: none;
+      transition: color 0.3s;
+    }
+    .service-card .btn:hover {
+      color: #ff5722;
+    }
+
+    .section-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: #a6bbcf;
+    }
+    .icon-box {
+      font-size: 40px;
+      color: #003366;
+      margin-bottom: 15px;
+    }
+    .reason-card h5 {
+      color: #003366;
+      font-size: 1.25rem;
+    }
+    .reason-card p {
+      color: #555;
+    }
+    .highlight-text {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .whatsapp_float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+.whatsapp_float img {
+    width: 60px;
+    height: 60px;
+}
+.carousel-item img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .hover-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hover-effect img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .hover-effect:hover img {
+            transform: scale(1.1);
+        }
+
+        .hover-effect .hover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .hover-effect:hover .hover-text {
+            opacity: 1;
+        }
+
+      body {
+      background-color: #d1d1e0;
+      color: #ffffff;    
+      font-family: Arial, sans-serif;
+    }
+    .how-it-works {
+      background-color: #535686;
+      padding: 40px;
+      border-radius: 10px;
+    }
+    .form-section {
+      background-color: #2b2d42;
+      padding: 40px;
+      border-radius: 10px;
+    }
+    .testimonials {
+      margin-top: 40px;
+      color: #d8d8d8;
+    }
+    .testimonial {
+      background-color: #2b2d42;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .testimonial h5 {
+      color: #00d1ff;
+    }
+    .anm{
+      color: rgb(22, 25, 26);
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <!-- Contact Information -->
+                <div class="col-md-4 contact-info">
+                    <p>
+                        <i class="fas fa-comments"></i> Contact: +9718008289,+9718008289,+9718008289
+                    </p>
+                    <p>
+                        <i class="fas fa-user"></i> Have a question? <a href="abc@gamil.com" style="color: #bfbfbf;">abc@gmail.com</a>
+                    </p>
+                </div>
+                <!-- Navigation Links -->
+                <div class="col-md-8 text-md-end nav-links">
+                    <a href="#"><i class="fas fa-question-circle"></i> About</a>
+                    <a href="#"><i class="fas fa-briefcase"></i> Careers</a>
+                    <a href="#"><i class="fas fa-tag"></i> Offers</a>
+                    <a href="#"><i class="fas fa-file-alt"></i> Blogs</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- yaha tak hi hai footer nav bar -->
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            MZ<span class="gear-icon"><i class="fas fa-cog"></i></span>Technical
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ms-auto bg-white">
+                <!-- Painting Dropdown -->
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="paintingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Painting
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="paintingDropdown">
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/painter.JPG" alt="Interior Painting" class="dropdown-image">Interior Painting</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/painter.JPG" alt="Exterior Painting" class="dropdown-image">Exterior Painting</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/painter.JPG" alt="Custom Designs" class="dropdown-image">Custom Designs</a></li>
+                    </ul>
+                </li>
+                <!-- Electrical Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="electricalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Electrical
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="electricalDropdown">
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/electrician.jpg" alt="Wiring Installation" class="dropdown-image">Wiring Installation</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/electrician.jpg" alt="Lighting Fixtures" class="dropdown-image">Lighting Fixtures</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/electrician.jpg" alt="Appliance Repair" class="dropdown-image">Appliance Repair</a></li>
+                    </ul>
+                </li>
+                <!-- Carpentry Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="carpentryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Carpentry
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="carpentryDropdown">
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/carpenter.jpg" alt="Custom Furniture" class="dropdown-image">Custom Furniture</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/carpenter.jpg" alt="Furniture Repair" class="dropdown-image">Furniture Repair</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/carpenter.jpg" alt="Woodwork Design" class="dropdown-image">Woodwork Design</a></li>
+                    </ul>
+                </li>
+                <!-- Plumbing Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="plumbingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Plumbing
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="plumbingDropdown">
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/plumber.jpg" alt="Leak Repair" class="dropdown-image">Leak Repair</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/plumber.jpg" alt="Pipe Installation" class="dropdown-image">Pipe Installation</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="images/plumber.jpg" alt="Drain Cleaning" class="dropdown-image">Drain Cleaning</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Background Image ya se-->
+<div style="position: relative; text-align: center; overflow: hidden;">
+    <!-- Background Image -->
+    <img src="images/Sales Pitch Presentation (2).png" alt="Sales Pitch Presentation" style="width: 100%; height: auto; object-fit: cover;">
+
+    <!-- Overlay for Design -->
+    <div style="
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: rgba(0, 0, 0, 0.5); 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        color: white; 
+        text-align: center;">
+        
+        <!-- Title -->
+        <h1 style="font-size: 2.5rem; font-weight: bold; margin: 0;"> welcome to MZ Technical</h1>
+
+        <!-- Subtitle -->
+        <p style="font-size: 1.2rem; margin: 10px 0;">Engage, Inspire, and Deliver Impactful Sales Pitches</p>
+
+        <!-- Button -->
+        <a href="#explore" style="
+            display: inline-block; 
+            padding: 10px 20px; 
+            font-size: 1rem; 
+            color: #fff; 
+            background-color: #007bff; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            transition: background-color 0.3s;">
+            Get Started
+        </a>
+    </div>
+</div>
+
+  <!-- Background Image ya se end-->  
+
+
+
+
+    <div class="container">
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+            <div class="welcome-text">
+                <h1>Welcome to <span>MZ Technical</span></h1>
+                <p>
+                    MZ Technical is your leading home maintenance service provider in Dubai, UAE. From plumbing to carpentry, AC service to painting – we have experts available 24/7 to cater to your needs.
+                </p>
+                <a href="#services" class="cta-button">Discover Our Services</a>
+            </div>
+            <div class="contact-details">
+                <img src="profile.jpg" alt="Contact Person">
+                <div>
+                    <p>+971 800 8289</p>
+                    <small>Book Service Now</small>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
+    
+        <!-- Service Steps Section -->
+        <div class="service-steps">
+            <div class="step">
+                <div class="number">1</div>
+                <div class="step-content">
+                    <h2>Appointment</h2>
+                    <p>Book our professionals through a toll-free number, WhatsApp, or email, and we’ll handle the rest.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="number">2</div>
+                <div class="step-content">
+                    <h2>On-Time Services</h2>
+                    <p>Our crew reaches your destination on time and completes work as promised.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="number">3</div>
+                <div class="step-content">
+                    <h2>Professionals at Work</h2>
+                    <p>Our licensed and trained professionals ensure quality service every time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- card design here -->    
+ <div class="container py-5">
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card service-card text-center p-3">
+          <div class="card-icon">🎨</div>
+          <h5 class="card-title">Painting Services</h5>
+          <p class="card-text">
+            Interior and exterior painting, wallpaper installation, and more.
+          </p>
+          <a href="#" class="btn">Learn More &rarr;</a>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card service-card text-center p-3">
+          <div class="card-icon">🔨</div>
+          <h5 class="card-title">Carpentry Service</h5>
+          <p class="card-text">
+            Repairing and assembling cabinets, beds, tables, and more.
+          </p>
+          <a href="#" class="btn">Learn More &rarr;</a>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card service-card text-center p-3">
+          <div class="card-icon">🛡️</div>
+          <h5 class="card-title">Gypsum Partition</h5>
+          <p class="card-text">
+            Protect your space from malware, hackers, and viruses.
+          </p>
+          <a href="#" class="btn">Learn More &rarr;</a>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="card service-card text-center p-3">
+          <div class="card-icon">💡</div>
+          <h5 class="card-title">Electrician</h5>
+          <p class="card-text">
+            Light installation, socket replacement, and more services.
+          </p>
+          <a href="#" class="btn">Learn More &rarr;</a>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="card service-card text-center p-3">
+          <div class="card-icon">❄️</div>
+          <h5 class="card-title">AC Service</h5>
+          <p class="card-text">
+            AC Maintenance, repair, and air conditioning cleaning.
+          </p>
+          <a href="#" class="btn">Learn More &rarr;</a>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="card service-card text-center p-3">
+          <div class="card-icon">🛠️</div>
+          <h5 class="card-title">Handyman</h5>
+          <p class="card-text">
+            A range of services for all your home improvement needs.
+          </p>
+          <a href="#" class="btn">Learn More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- your are choose why -->
+    <div class="container py-5">
+        <!-- Title and Description -->
+        <div class="text-center mb-5">
+          <p class="text-primary text-uppercase fs-2"><b>Why Choose Us!</b></p>
+          <h2 class="text-primary text-uppercase">5 Reasons to Choose MZ Technical</h2>
+          <p class="highlight-text">
+            We know that finding the right team to handle your home repairs and
+            maintenance needs can be overwhelming, but with MZ Technical, you can rest
+            assured that you’re in good hands. Here are some reasons why you should
+            choose us for all your home service needs.
+          </p>
+        </div>
+    
+        <!-- 5 Reasons Section -->
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="text-center reason-card">
+              <div class="icon-box">📚</div>
+              <h5>Expertise</h5>
+              <p>
+                Our team of skilled professionals has years of experience in their
+                respective fields and is trained to handle any job, big or small.
+              </p>
+            </div>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="text-center reason-card">
+              <div class="icon-box">⏰</div>
+              <h5>Reliability</h5>
+              <p>
+                We always arrive on time and complete work in a timely and efficient
+                manner, striving to exceed expectations.
+              </p>
+            </div>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="text-center reason-card">
+              <div class="icon-box">⚙️</div>
+              <h5>Quality</h5>
+              <p>
+                We use only the highest quality materials and equipment to ensure
+                every job is done right the first time.
+              </p>
+            </div>
+          </div>
+    
+          <!-- Card 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="text-center reason-card">
+              <div class="icon-box">📞</div>
+              <h5>Customer Service</h5>
+              <p>
+                We offer 24/7 customer support, ensuring you can reach us anytime,
+                day or night.
+              </p>
+            </div>
+          </div>
+    
+          <!-- Card 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="text-center reason-card">
+              <div class="icon-box">💰</div>
+              <h5 >Affordable Pricing</h5>
+              <p >
+                We strive to make our services affordable while maintaining
+                top-notch quality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- why you choose-->
+<div class="container my-5">
+        <!-- Section 1: What Makes Us No.1 -->
+        <div class="mb-5">
+            <h2 class="text-primary mb-4">Why choose MZ Technician no.1?</h2>
+            <p class="anm">
+                At mz tecchnician, we are dedicated to being the top home maintenance service provider in Dubai. We take pride in our team of highly skilled and experienced professionals who are committed to delivering quality services that exceed your expectations.
+            </p>
+            <p class="anm">
+                Our focus on customer satisfaction sets us apart from our competitors. Our team is available 24/7 to assist with any emergency services you may require. We offer a wide range of services, including plumbing, electrical, handyman, masonry, tiling, painting, AC repair, water pump repair, and water heater installation and repair. Every job is completed to the highest standard using the latest tools and techniques.
+            </p>
+            <p class="anm">
+                Transparency and honesty are at the heart of our business. Our pricing is competitive, and we provide a clear breakdown of costs upfront. We offer free quotes and consultations to ensure you are fully informed before making any decisions.
+            </p>
+            <p class="anm">
+                At Toolboys, we strive for excellence in every aspect of our business. No matter the size of the job, we are committed to providing you with the best possible service. Choose us and experience why we are the No.1 home maintenance service provider in Dubai.
+            </p>
+        </div>
+
+        <!-- Section 2: Annual Maintenance Contract -->
+        <div>
+            <h2 class="text-primary mb-4">Annual Maintenance Contract</h2>
+            <p class="anm">
+                Welcome to mz tecchnician, where we offer Annual Maintenance Contract (AMC) services for your home or business in Dubai. With our AMC services, you can ensure that your property's essential systems and appliances are regularly inspected, maintained, and repaired to prevent unexpected breakdowns.
+            </p>
+            <p class="anm">
+                We understand the importance of keeping your property in top condition and minimizing the risk of costly repairs. That’s why we offer flexible and affordable AMC packages to suit your needs. Our team of expert technicians is trained to identify and resolve issues before they turn into major problems, saving you time and money in the long run.
+            </p>
+            <p class="anm">
+                Our AMC for home maintenance service covers a wide range of systems and appliances, including plumbing, electrical, air conditioning, and more. Our team conducts a comprehensive inspection of your property and prepares a detailed report of any issues identified. We then provide you with a customized AMC package that meets your specific needs and budget.
+            </p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+      <h2 class="text-center text-primary mb-4">Gallery</h2>
+      <div id="multiImageCarousel" class="carousel slide" data-bs-ride="carousel">
+          <!-- Carousel Indicators -->
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#multiImageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#multiImageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+
+          <!-- Carousel Items -->
+          <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <div class="hover-effect">
+                              <img src="images/2.jpg" class="d-block w-100" alt="Curtain Hanging">
+                              <div class="hover-text">Curtain Hanging</div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="hover-effect">
+                              <img src="images/2.jpg" class="d-block w-100" alt="Furniture Assembly">
+                              <div class="hover-text">Furniture Assembly IKEA</div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="hover-effect">
+                              <img src="images/2.jpg" class="d-block w-100" alt="TV Mounting">
+                              <div class="hover-text">TV Mounting</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <div class="hover-effect">
+                              <img src="images/2.jpg" class="d-block w-100" alt="Image 4">
+                              <div class="hover-text">Image 4</div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="hover-effect">
+                              <img src="images/2.jpg" class="d-block w-100" alt="Image 5">
+                              <div class="hover-text">Image 5</div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="hover-effect">
+                              <img src="images/2.jpg" class="d-block w-100" alt="Image 6">
+                              <div class="hover-text">Image 6</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#multiImageCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#multiImageCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+  </div>
+<!-- form section -->
+
+<div class="container py-5">
+  <div class="row">
+    <!-- How It Works Section -->
+    <div class="col-md-6 how-it-works">
+      <h2 class="mb-4">How It Works</h2>
+      <ul class="list-unstyled">
+        <li class="mb-3">
+          <strong>Raise Your Request</strong>
+          <p>If we’re the right fit, you’ll choose the IT service agreement that works best for your organization.</p>
+        </li>
+        <li class="mb-3">
+          <strong>Get Estimate</strong>
+          <p>We’ll chat about your business, how you use technology, and what you want to get out of it.</p>
+        </li>
+        <li>
+          <strong>Schedule Visit</strong>
+          <p>Within days, you’ll be experiencing IT like never before.</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Form Section -->
+    <div class="col-md-6 form-section">
+      <h2 class="mb-4">Get a Service Quote</h2>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name*</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number*</label>
+          <input type="tel" class="form-control" id="phone" required>
+        </div>
+        <div class="mb-3">
+          <label for="service" class="form-label">Type of Service You Need?*</label>
+          <select class="form-select" id="service" required>
+            <option value="">Select...</option>
+            <option value="1">Service 1</option>
+            <option value="2">Service 2</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="issue" class="form-label">Briefly Explain Your Issue Here...</label>
+          <textarea class="form-control" id="issue" rows="3"></textarea>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="terms" required>
+          <label class="form-check-label" for="terms">I accept the Toolbox Privacy Policy and Terms & Conditions.</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Book</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="testimonials mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="testimonial">
+          <h5>Jeffrey</h5>
+          <p>The team of Tool Boys is really efficient and helpful, especially in emergencies...</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial">
+          <h5>Richard</h5>
+          <p>Highly recommended! Responsive team, and they fixed my electrical work very quickly...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+      <a href="https://api.whatsapp.com/send?phone=+91 94578 18861" class="whatsapp_float" target="_blank">
+        <img src="images/WhatsApp_icon.png.webp" alt="WhatsApp" />
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

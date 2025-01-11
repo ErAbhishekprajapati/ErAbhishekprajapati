@@ -1,0 +1,61 @@
+/* Navbar Styles */
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 24px;
+    color: #0072ff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .gear-icon i {
+    margin-left: 5px;
+    color: #ffcd38;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.nav-link {
+    color: #333;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0072ff;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: #f5f8fc;
+}
+
+.dropdown-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}

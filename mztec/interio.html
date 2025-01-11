@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon Hover Effect</title>
+  <link rel="stylesheet" href="service.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+
+ .icon-section {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #6a0dad;
+      padding: 20px 50px;
+      color: #ddd;
+      z-index: 1000; /* Ensures it stays on top of other content */
+    }
+
+    .contact-info {
+      font-size: 14px;
+      
+    }
+
+    .contact-info i {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    .nav-icons .icon {
+    
+      margin: 0 15px;
+      font-size: 18px;
+      transition: color 0.3s, transform 0.3s;
+      text-align: center;
+    }
+
+    .nav-icons .icon:hover {
+      color: #fff;
+      transform: scale(1.2);
+    }
+
+    .nav-icons .icon i {
+      /* display: block; */
+      font-size: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      
+    }
+
+    .footer {
+      background-color: #2b223c;
+      color: #fff;
+      padding: 40px 20px;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer .social-icons a {
+      margin-right: 15px;
+      font-size: 18px;
+      color: #fff;
+    }
+    .footer .social-icons a:hover {
+      color: #17a2b8;
+    }
+  
+    .icon-section {
+      background-color: #6a0dad;
+      padding: 20px;
+      text-align: center;
+      color: #ddd;
+    }
+
+    .icon {
+      margin: 0 15px;
+      font-size: 18px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .icon:hover {
+      color: #fff;
+      transform: scale(1.2);
+    }
+
+    .contact-info {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .icon i {
+      display: block;
+      font-size: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* General Navbar Styles */
+.navbar {
+    background-color: #343a40; /* Dark background */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+
+.gear-icon {
+    margin-left: 5px;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-nav {
+    font-size: 1rem;
+}
+
+.nav-item {
+    position: relative;
+
+}
+
+/* Dropdown Menu */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    color: #343a40;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+.dropdown-item .dropdown-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Image Hover Effect */
+.dropdown-item .dropdown-image:hover {
+    transform: scale(1.1);
+}
+
+/* Image Styling for Non-Hover State */
+.dropdown-item .dropdown-image {
+    transition: transform 0.3s ease;
+}
+
+/* Navbar Link Hover Effects */
+.nav-link:hover {
+    color: #007bff !important;
+}
+
+/* Navbar Responsive Styling */
+@media (max-width: 991px) {
+    .navbar-nav {
+        background-color: white;
+        width: 100%;
+    }
+
+    .nav-item {
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        background-color: #f8f9fa;
+        border-radius: 0;
+    }
+}
+/* ya ha se header  ka style */
+/* Custom CSS */
+.header-section {
+            background: #f8f9fa; /* Light gray background */
+            padding: 40px 20px; /* Spacing around the header */
+            text-align: center; /* Center-align text */
+        }
+
+        .header-section h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1b3764; /* Dark blue color */
+        }
+
+        .header-section h2 {
+            font-size: 1.5rem;
+            color: #1b3764; /* Dark blue color */
+        }
+
+        .header-section p {
+            font-size: 1rem;
+            color: #6c757d; /* Gray text for description */
+            margin-bottom: 30px; /* Space between description and nav */
+        }
+
+        .nav-tabs {
+            border-bottom: none; /* Remove bottom border from nav */
+            justify-content: center; /* Center the tabs */
+        }
+
+        .nav-tabs .nav-link {
+            color: #6c757d; /* Gray for inactive tabs */
+            font-size: 1rem;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #1b3764; /* Dark blue for active tab */
+            font-weight: bold;
+            border-color: transparent;
+            border-bottom: 3px solid #00c6ff; /* Light blue underline */
+        }
+      .card-hover:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+    .card-header {
+      background-color: #00aaff;
+      color: #fff;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    .card-body {
+      text-align: center;
+    }
+    .faq-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .faq-item:hover {
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .faq-title {
+            font-weight: bold;
+        }
+        .info-section {
+            background-color: #2b2b44;
+            color: #ffffff;
+            padding: 40px 20px;
+        }
+        .info-section h2 {
+            color: #5ce0d8;
+            text-transform: uppercase;
+        }
+        .info-section p {
+            margin-bottom: 30px;
+        }
+        .info-section .icon {
+            font-size: 24px;
+            color: #5ce0d8;
+        }
+        .info-section h5 {
+            margin: 15px 0 10px;
+            font-weight: bold;
+        }
+        .info-section p {
+            font-size: 14px;
+        }
+        .form-section {
+            padding: 40px 20px;
+        }
+        .form-section .form-control {
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .form-section .btn {
+            background-color: #d3d3d3;
+            border: none;
+            border-radius: 5px;
+            color: #6c757d;
+            font-weight: bold;
+            cursor: not-allowed;
+        }
+        .form-section .btn:hover {
+            background-color: #d3d3d3;
+        }
+        .form-section .form-check-label {
+            font-size: 14px;
+        }
+        .form-section .form-check-label a {
+            color: #5ce0d8;
+        }
+
+  </style>
+</head>
+<body>
+
+<div class="icon-section d-flex justify-content-between align-items-center">
+  <!-- Left Section: Contact and Email -->
+  <div class="contact-info">
+    <p>
+      <i class="bi bi-telephone"></i> Contact: 
+      <span>+9718008289, +9718008289, +9718008289</span>
+    </p>
+    <p>
+      <i class="bi bi-envelope"></i> Have a question? 
+      <a href="mailto:abc@gmail.com">abc@gmail.com</a>
+    </p>
+  </div>
+
+  <!-- Right Section: Navigation Icons -->
+  <div class="nav-icons d-flex">
+    <a href="#" class="icon">
+      <i class="bi bi-question-circle"></i>
+      About
+    </a>
+    <a href="#" class="icon">
+      <i class="bi bi-briefcase"></i>
+      Careers
+    </a>
+    <a href="#" class="icon">
+      <i class="bi bi-tag"></i>
+      Offers
+    </a>
+    <a href="#" class="icon">
+      <i class="bi bi-file-text"></i>
+      Blogs
+    </a>
+    <a href="#" class="icon">
+      <i class="bi bi-envelope"></i>
+      Contact Us
+    </a>
+  </div>
+</div>
+
+
+
+
+<h2 class="text-center mb-4">OUR HOUSE PAINTING SERVICES</h2>
+<div class="container py-3">
+    <h2 class="text-center mb-4">OUR HOUSE PAINTING SERVICES</h2>
+    <div class="row justify-content-center">
+        <!-- Apartment Painting -->
+        <div class="col-md-5 mb-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center">
+                    <img src="icon-apartment.png" alt="Apartment Painting Icon" class="mb-3" style="width: 50px;">
+                    <h4 class="card-title">Apartment Painting</h4>
+                    <p class="card-text">
+                        If you’re looking to refresh your apartment, our apartment painting services are the perfect solution. 
+                        We understand the challenges that come with painting in an apartment, and we work with you to minimize 
+                        disruptions and keep the process as smooth as possible. Our team of painters is skilled in painting 
+                        different surfaces and materials, ensuring that your apartment looks fresh and vibrant for years to come.
+                    </p>
+                    <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+        <!-- Villa Painting -->
+        <div class="col-md-5 mb-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-body text-center">
+                    <img src="icon-villa.png" alt="Villa Painting Icon" class="mb-3" style="width: 50px;">
+                    <h4 class="card-title">Villa Painting</h4>
+                    <p class="card-text">
+                        For homeowners looking to update their villas, our villa painting services are an excellent choice. 
+                        We work with you to select the perfect color and finish for your villa, ensuring that the finished 
+                        product matches your vision. Our team of painters is experienced in painting both interior and 
+                        exterior surfaces, from walls and ceilings to doors and windows. With our expertise and attention 
+                        to detail, you can trust that your villa will look stunning after we’re done.
+                    </p>
+                    <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header Section -->
+<div class="header-section">
+    <h1>EMERGENCY HOUSE PAINTING SERVICES</h1>
+    <h2>QUICK & RELIABLE | MZ Technical</h2>
+    <p>House painting, emergency painting services, apartment painting, villa painting, quick painting solutions</p>
+
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Furniture Painting & Polishing</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">House Painting</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Office Painting</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Wallpaper Installation</a>
+        </li>
+    </ul>
+</div>
+<!-- how choose in MZ tech -->
+<section class="container my-5">
+    <h1 class="text-center mb-4">Why CHOOSE MZ Technical</h1>
+    <h2 class="text-center mb-4">REASONS TO CHOOSE MZ Technical</h2>
+    <p class="text-center mb-5">
+      We know that finding the right team to handle your home repairs and maintenance needs can be overwhelming,
+      but with Toolboys, you can rest assured that you're in good hands. Here are some reasons why you should
+      choose us for all your home service needs:
+    </p>
+    <div class="row text-center">
+      <div class="col-md-3 mb-4">
+        <i class="bi bi-tools display-4 text-primary"></i>
+        <h5 class="mt-3">Expertise</h5>
+        <p>
+          Our team of skilled professionals have years of experience in their respective fields, trained to handle any job, big or small.
+        </p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <i class="bi bi-shield-check display-4 text-primary"></i>
+        <h5 class="mt-3">Reliability</h5>
+        <p>
+          We understand your time is valuable. We always arrive on time and complete our work in a timely and efficient manner.
+        </p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <i class="bi bi-gem display-4 text-primary"></i>
+        <h5 class="mt-3">Quality</h5>
+        <p>
+          We use only the highest quality materials and equipment to ensure your repairs are done to the highest standards.
+        </p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <i class="bi bi-currency-dollar display-4 text-primary"></i>
+        <h5 class="mt-3">Affordable Pricing</h5>
+        <p>
+          We offer competitive pricing for home repairs and maintenance without compromising quality.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- counting values page -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-2 offset-md-1">
+        <div class="card card-hover">
+          <div class="card-header">45 mins</div>
+          <div class="card-body">
+            <p class="mb-0">Emergency call-outs</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card card-hover">
+          <div class="card-header">24/7</div>
+          <div class="card-body">
+            <p class="mb-0">Availability</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card card-hover">
+          <div class="card-header">100%</div>
+          <div class="card-body">
+            <p class="mb-0">Competitive Pricing</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card card-hover">
+          <div class="card-header">100%</div>
+          <div class="card-body">
+            <p class="mb-0">User Satisfaction</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card card-hover">
+          <div class="card-header">100%</div>
+          <div class="card-body">
+            <p class="mb-0">Quality Service</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-center mt-4">
+      When it comes to repair & maintenance for your home or office, you need an expert. <a href="#" class="text-primary">Let's get started</a>.
+    </p>
+  </section>
+
+<!-- faq page   -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">FAQs</h2>
+    <div class="row g-3">
+        <!-- FAQ Items -->
+        <div class="col-md-6">
+            <div class="faq-item d-flex justify-content-between align-items-center">
+                <span class="faq-title">What services do you offer?</span>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq-item d-flex justify-content-between align-items-center">
+                <span class="faq-title">What forms of payment do you accept?</span>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq-item d-flex justify-content-between align-items-center">
+                <span class="faq-title">How do I book your services?</span>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq-item d-flex justify-content-between align-items-center">
+                <span class="faq-title">How long does a typical service call take?</span>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq-item d-flex justify-content-between align-items-center">
+                <span class="faq-title">How much do your services cost?</span>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq-item d-flex justify-content-between align-items-center">
+                <span class="faq-title">Do you offer warranty for your services?</span>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq-item d-flex justify-content-between align-items-center">
+                <span class="faq-title">Are your technicians licensed and insured?</span>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq-item d-flex justify-content-between align-items-center">
+                <span class="faq-title">Can I cancel or reschedule my appointment?</span>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq-item d-flex justify-content-between align-items-center">
+                <span class="faq-title">What if I'm not satisfied with the service?</span>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="faq-item d-flex justify-content-between align-items-center">
+                <span class="faq-title">Do you offer discounts or promotions?</span>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- form design here -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Left Section -->
+        <div class="col-lg-6 info-section">
+            <h2>Get a Plumbing Solutions Quote</h2>
+            <p>Please contact our team or complete the form below. A representative will contact you shortly.</p>
+            <div class="d-flex align-items-start mb-4">
+                <div class="icon me-3">💬</div>
+                <div>
+                    <h5>Raise Your Request</h5>
+                    <p>We’ll talk about your issues, how you use technology, and what you want to get out of IT.</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-start mb-4">
+                <div class="icon me-3">⚙️</div>
+                <div>
+                    <h5>Get Estimate</h5>
+                    <p>If we’re the right fit, you’ll choose the IT service agreement that works best for your organization.</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-start">
+                <div class="icon me-3">🎯</div>
+                <div>
+                    <h5>Schedule Visit</h5>
+                    <p>Within days, you’ll be experiencing IT like never before.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Right Section -->
+        <div class="col-lg-6 form-section">
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name *</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number *</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="service" class="form-label">Type Of Service You Need? *</label>
+                    <select class="form-select" id="service" required>
+                        <option selected disabled>Choose a service</option>
+                        <option value="1">Plumbing Repair</option>
+                        <option value="2">Maintenance</option>
+                        <option value="3">Emergency Services</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="issue" class="form-label">Briefly explain your issue here...</label>
+                    <textarea class="form-control" id="issue" rows="3" placeholder="Describe your issue" required></textarea>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="terms" required>
+                    <label class="form-check-label" for="terms">
+                        I accept the <a href="#">Privacy Policy</a> and <a href="#">Terms & Conditions</a>.
+                    </label>
+                </div>
+                <button type="submit" class="btn w-100" disabled>Book</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- footer design here -->
+<div class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Services Section -->
+        <div class="col-md-3">
+          <h5>Painting</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Furniture Painting & Polishing</a></li>
+            <li><a href="#">House Painting</a></li>
+            <li><a href="#">Office Painting</a></li>
+            <li><a href="#">Wallpaper Installation</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Carpentry</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Custom Made Furniture</a></li>
+            <li><a href="#">Furniture Assembly</a></li>
+            <li><a href="#">Furniture Repair</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Plumbing</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Leakage Inspection</a></li>
+            <li><a href="#">Fixture Installation</a></li>
+            <li><a href="#">Drainage Cleaning</a></li>
+            <li><a href="#">Water Tank Cleaning</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>AC Service</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">AC Duct Cleaning</a></li>
+            <li><a href="#">AC Installation</a></li>
+            <li><a href="#">AC Repair</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4" style="border-color: #444;">
+      <div class="row">
+        <!-- Contact Information -->
+        <div class="col-md-6">
+          <p>Address: Dubai Silicon Oasis</p>
+          <p>Phone: <a href="tel:+9718008289">+971-800-828900</a></p>
+          <p>Email: <a href="mailto:abc@gmail.com">abc@gmail.com</a></p>
+        </div>
+        <!-- Social Icons -->
+        <div class="col-md-6 text-md-end">
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p>&copy; 2023 MZ Technical services. Designed and Developed by <a href="#">Abhishek Prajapati</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
