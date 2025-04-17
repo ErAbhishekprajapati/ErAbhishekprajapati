@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolBoys Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #00a6d6;
+            color: #fff;
+            margin: 0;
+        }
+
+        .landing-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            min-height: 100vh;
+        }
+
+        .text-content {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .text-content h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .text-content h2 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #ffe700;
+        }
+
+        .text-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .text-content a {
+            text-decoration: none;
+            color: #00a6d6;
+            background: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .text-content a:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        .image-content {
+            flex: 1;
+            max-width: 50%;
+            text-align: right;
+            position: relative;
+        }
+
+        .image-content img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            width: 250px;
+            height: 250px;
+        }
+
+        .service-item {
+            text-align: center;
+            font-size: 0.8em;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            padding: 10px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .service-item img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 5px;
+        }
+
+        .service-item:hover {
+            background: #ffe700;
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .landing-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .text-content, .image-content {
+                max-width: 100%;
+            }
+
+            .image-content {
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-content h1 {
+                font-size: 2em;
+            }
+
+            .text-content h2 {
+                font-size: 2.5em;
+            }
+
+            .text-content p {
+                font-size: 1em;
+            }
+
+            .text-content a {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+
+            .service-item {
+                width: 60px;
+                height: 60px;
+                font-size: 0.8em;
+            }
+
+            .service-item img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- worker image page -->
+    <div class="landing-container">
+        <div class="text-content">
+            <h1>WE&#39;RE TOOLBOYS</h1>
+            <h2>PLUMBING</h2>
+            <p>Be a part of our family, handle us the hustle as we know it better.</p>
+            <a href="#">Book Service Here</a>
+        </div>
+        <div class="image-content">
+            <img src="worker-image.png" alt="Worker Image">
+            <div class="services-circle">
+                <div class="service-item">
+                    <img src="carpentry-icon.png" alt="Carpentry">
+                    Carpentry
+                </div>
+                <div class="service-item">
+                    <img src="plumbing-icon.png" alt="Plumbing">
+                    Plumbing
+                </div>
+                <div class="service-item">
+                    <img src="tiling-icon.png" alt="Tiling">
+                    Tiling
+                </div>
+                <div class="service-item">
+                    <img src="ac-service-icon.png" alt="AC Service">
+                    AC Service
+                </div>
+                <div class="service-item">
+                    <img src="painting-icon.png" alt="Painting">
+                    Painting
+                </div>
+                <div class="service-item">
+                    <img src="handyman-icon.png" alt="Handyman">
+                    Handyman
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- worker image end page -->
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Cards with Hover Effect</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    .service-card {
+      background-color: #2a0134; /* Card background color */
+      color: white;
+      border: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .service-card .card-icon {
+      font-size: 40px;
+      color: #ff9800;
+      margin-bottom: 15px;
+    }
+    .service-card .btn {
+      background-color: transparent;
+      color: #00ff00;
+      border: none;
+      transition: color 0.3s;
+    }
+    .service-card .btn:hover {
+      color: #ff5722;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card service-card text-center p-3">
+          <div class="card-icon">🎨</div>
+          <h5 class="card-title">Painting Services</h5>
+          <p class="card-text">
+            Interior and exterior painting, wallpaper installation, and more.
+          </p>
+          <a href="#" class="btn">Learn More &rarr;</a>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card service-card text-center p-3">
+          <div class="card-icon">🔨</div>
+          <h5 class="card-title">Carpentry Service</h5>
+          <p class="card-text">
+            Repairing and assembling cabinets, beds, tables, and more.
+          </p>
+          <a href="#" class="btn">Learn More &rarr;</a>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card service-card text-center p-3">
+          <div class="card-icon">🛡️</div>
+          <h5 class="card-title">Gypsum Partition</h5>
+          <p class="card-text">
+            Protect your space from malware, hackers, and viruses.
+          </p>
+          <a href="#" class="btn">Learn More &rarr;</a>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="card service-card text-center p-3">
+          <div class="card-icon">💡</div>
+          <h5 class="card-title">Electrician</h5>
+          <p class="card-text">
+            Light installation, socket replacement, and more services.
+          </p>
+          <a href="#" class="btn">Learn More &rarr;</a>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="card service-card text-center p-3">
+          <div class="card-icon">❄️</div>
+          <h5 class="card-title">AC Service</h5>
+          <p class="card-text">
+            AC Maintenance, repair, and air conditioning cleaning.
+          </p>
+          <a href="#" class="btn">Learn More &rarr;</a>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="card service-card text-center p-3">
+          <div class="card-icon">🛠️</div>
+          <h5 class="card-title">Handyman</h5>
+          <p class="card-text">
+            A range of services for all your home improvement needs.
+          </p>
+          <a href="#" class="btn">Learn More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
